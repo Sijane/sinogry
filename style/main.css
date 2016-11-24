@@ -1,0 +1,222 @@
+/* ------------ Font ----------------------- */
+section {font-family: "Times New Roman", Georgia, serif;}
+h1, h2, h3, nav, section p:first-letter {font-family: Parkavenue, cursive;}
+
+
+
+/* ----------Header & text contents--------- */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header img {
+  position: relative;
+  width: 100%;
+}
+
+header h1 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 300px;
+  padding: 5px 0;
+  width: 7em;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 300;
+  letter-spacing: .12em;
+  background-color: #515100;
+  color: #ffff66;
+  border: 1px solid #ffff66;
+  border-radius: .2em;
+  outline: .2em solid #515100;
+  opacity: .7;  
+}
+
+h1 a {
+  text-decoration: none;
+  color: #ffff66;
+}
+
+nav ul {
+  width: 50%;
+  margin: 1.5em auto;
+  padding: 0;
+}
+
+nav li {
+  text-align: center;
+  list-style: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: .12em;
+}
+
+nav li a {
+  color: #7f7f00;
+  text-decoration: none;
+}
+
+nav ul::after {
+  content: " ";
+  display: block;
+  height: 0;
+  margin: 1.5em auto 3em;
+  width: 12em;
+  border-top: 1px solid #c1c18b;
+}
+
+nav li a:hover {
+  color: #fb1618;
+  height: 12px;
+  padding: 0 15px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px grey;
+}
+
+nav li a:focus, li a:active {
+  color: #fff;
+  font-weight: bold;
+  background-color: #fb1618;
+  box-shadow: 0 0 0 #fff;
+}
+
+
+h2 {
+  color: #fb1618;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 500;
+  letter-spacing: .11em;
+}
+
+h3, .as {
+  background: -webkit-linear-gradient(left, #c1c18b, #515100, #c1c18b);
+  text-align: center;
+  line-height: 1.2;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  outline: .1em solid #919100;
+  opacity: .9;
+}
+
+section {
+  position: relative;
+  margin: 0 5em;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+section p:not(.vidcaption):first-letter {
+  color: #fb1618;
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: .1em;
+}
+
+section a {
+  color: #919100;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+section a::after {
+  content: "(" attr(href) ")";
+}
+
+section figure a::after {
+  content: "";
+}
+
+#gallery div {
+  display: flex;
+}
+
+section:last-child {
+  margin-bottom: 60px;
+}
+
+footer {
+  margin: 0;
+  padding: 0.1em 1.6em;
+  color: #fff;
+  background-color: #515100;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+
+
+
+/* ---- The following applies to figures/imgs except the header banner. ----- */
+
+figure {
+  display: inline-block;
+  position: relative;
+}
+
+figcaption {
+  margin: -.5em auto .3em;
+  padding: .2em 0;
+  color: #000;
+  font-size: .9em;
+  font-style: italic;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* ---- Not working -------
+figure:not(#style) {
+  border: 1px solid #c1c18b;
+}
+*/
+
+#style figure, .tools figcaption {
+  border: 0 solid #fff;
+}
+
+#style img {
+  margin: 0 1em .5em;
+  vertical-align: top;
+}
+
+#style figcaption {
+  margin-top: .5em;
+  width: 9em;
+  color: #7f7f00;
+  text-align: center;
+  border: 0px;
+  border-top: 1px dashed #c1c18b;
+}
+
+.horse img {
+  padding: .4em;
+  width: 4em;
+  border: .7em solid #f4f4e5;
+  box-shadow: -1px 2px 3px #c6c9cc;
+}
+
+span {
+  position: absolute;
+  padding: 0 .3em;
+  top: 0;
+  right: 0;
+  color: #000;
+  font-size: .8em;
+  font-style: normal;
+  background: rgba(255, 255, 255, .5);
+}
+
+span a {
+  color: #000;
+}
+
