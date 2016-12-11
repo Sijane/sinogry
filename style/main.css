@@ -1,7 +1,6 @@
 /* ------------ Font ----------------------- */
 section {font-family: "Times New Roman", Georgia, serif;}
-h1, h2, h3, nav, section p:first-letter {font-family: Parkavenue, cursive;}
-
+h1, h2, h3, nav, section p:first-letter {font-family: "Apple Chancery", cursive;}
 
 
 /* ----------Header & text contents--------- */
@@ -10,7 +9,7 @@ body {
   padding: 0;
 }
 
-header img {
+header, header img {
   position: relative;
   width: 100%;
 }
@@ -20,7 +19,7 @@ header h1 {
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 300px;
+  top: 8em;
   padding: 5px 0;
   width: 7em;
   text-align: center;
@@ -29,15 +28,22 @@ header h1 {
   letter-spacing: .12em;
   background-color: #515100;
   color: #ffff66;
-  border: 1px solid #ffff66;
+  border: 2px ridge #ffff66;
   border-radius: .2em;
   outline: .2em solid #515100;
-  opacity: .7;  
+  opacity: .8;  
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 a {
-  text-decoration: none;
   color: #ffff66;
+}
+
+h1 a:hover {
+  text-shadow: inset -1px 3px 8px #000;
 }
 
 nav ul {
@@ -56,7 +62,6 @@ nav li {
 
 nav li a {
   color: #7f7f00;
-  text-decoration: none;
 }
 
 nav ul::after {
@@ -83,20 +88,20 @@ nav li a:focus, li a:active {
   box-shadow: 0 0 0 #fff;
 }
 
-
 h2 {
   color: #fb1618;
   text-align: center;
   font-size: 1.6em;
   font-weight: 500;
-  letter-spacing: .11em;
+  letter-spacing: .08em;
 }
 
 h3, .as {
+  clear: both;
   background: -webkit-linear-gradient(left, #c1c18b, #515100, #c1c18b);
   text-align: center;
-  line-height: 1.2;
-  font-size: 1em;
+  line-height: 1.1;
+  font-size: 1.1em;
   font-weight: 500;
   color: #fff;
   border: 1px solid #fff;
@@ -121,7 +126,6 @@ section p:not(.vidcaption):first-letter {
 
 section a {
   color: #919100;
-  text-decoration: none;
   border-bottom: 1px dotted;
 }
 
@@ -133,15 +137,12 @@ section figure a::after {
   content: "";
 }
 
-#gallery div {
-  display: flex;
-}
-
 section:last-child {
   margin-bottom: 60px;
 }
 
 footer {
+  clear: both;
   margin: 0;
   padding: 0.1em 1.6em;
   color: #fff;
@@ -150,10 +151,8 @@ footer {
 
 footer a {
   color: #fff;
-  text-decoration: none;
   border-bottom: 1px dotted;
 }
-
 
 
 
@@ -171,17 +170,22 @@ figcaption {
   font-size: .9em;
   font-style: italic;
   text-align: center;
-  border: 1px solid #ccc;
+  box-shadow: inset 0 0 12px #f4f4e5;
 }
 
-/* ---- Not working -------
-figure:not(#style) {
-  border: 1px solid #c1c18b;
+#intro figure, #tool figure, #style figure,
+#tech video {
+  float: right;
+  margin-top: 0;
 }
-*/
+
+#gallery div {
+  display: flex;
+}
 
 #style figure, .tools figcaption {
   border: 0 solid #fff;
+  box-shadow: inset 0 0 8px #fff;
 }
 
 #style img {
@@ -196,6 +200,7 @@ figure:not(#style) {
   text-align: center;
   border: 0px;
   border-top: 1px dashed #c1c18b;
+  box-shadow: inset 0 0 8px #fff;
 }
 
 .horse img {
