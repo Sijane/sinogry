@@ -15,14 +15,16 @@ header, header img {
 }
 
 header h1 {
-  position: absolute;  /*to let header h1 overlap with header img*/
-  bottom: 30%; /* to break at 500px to 25%*/
-  left: 50%;
-  transform: translate(-50%, 30%); /* note(-4) */   
-  text-align: center;
-  padding: .3em;
-  font-size: 2.8em;   /* to break at 500px to 2.5em*/
+  position: absolute;
+  margin: auto;  
+  left: 0;
+  right: 0;
+  bottom: 28%;   
+  padding: 5px 0;
+  width: 7em;
+  font-size: 3.3em;
   font-weight: 100;
+  text-align: center;
   letter-spacing: .12em;
   background-color: #515100;
   color: #ffff66;
@@ -40,39 +42,39 @@ h1 a:hover {
   text-shadow: inset -1px 3px 8px #000;
 }
 
-#main-nav  {
-  text-align: center;
-  cursor: pointer;
-}
-
-#main-nav::after {    
-  content: " ";
-  display: block;  /* table? */
-  height: 0;
-  margin: 1.5em auto 3em;
-  width: 12em;
-  border-top: 1px solid #c1c18b;
-/*  clear: both;*/
+a {
+  text-decoration: none;
 }
 
 nav ul {
-  list-style: none;  /*remove the bullet*/
-  padding-left: 0;
+  margin: 1.5em auto;
+  padding: 0;
 }
 
 nav li {
+  text-align: center;
+  list-style: none;
   font-size: 1.7em;
   letter-spacing: .1em;
 }
 
-#mini-nav ul {
-  display: none;
+nav li a {
+  color: #7f7f00;
+}
+
+nav ul::after {
+  content: " ";
+  display: block;
+  height: 0;
+  margin: 1.5em auto 3em;
+  width: 12em;
+  border-top: 1px solid #c1c18b;
 }
 
 nav li a:hover {
   color: #fb1618;
   height: 12px;
-  padding: 0 .3em;
+  padding: 0 15px;
   font-weight: 900;
   border-radius: 3px;
   box-shadow: 0 0 8px grey;
@@ -85,24 +87,12 @@ nav li a:focus, li a:active {
   box-shadow: 0 0 0 #fff;
 }
 
-a {
-  text-decoration: none;  /*remove underline*/
-}
-
-nav li a {
-  color: #7f7f00;
-}
-
 h2 {
   color: #fb1618;
   text-align: center;
   font-size: 1.6em;
   font-weight: 500;
   letter-spacing: .08em;
-}
-
-.fixed-nav {
-  position: fixed;
 }
 
 h3, .as {
@@ -197,30 +187,10 @@ span a {
   color: #000;
 }
 
-#gallery {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: center;
-}
-
 #gallery figure {
-  padding: 0 .3em;
+  float: none;
+  display: inline-block;
 }
-
-#gallery img.b-figure {
-  display: none;
-}
-
-img.b-figure {
-/*  display: block;*/
-  height: 50vw;
-}
-
- a img.Large { display: none; }
-
-   a:hover img.Small { display: none }
-   a:hover img.Large { display: block; }
 
 .tools figcaption {
   border: 0 solid #fff;
@@ -230,14 +200,6 @@ img.b-figure {
 .tools img {
   width: 50vw;
 }
-
-/*
-figure.tools:hover {
-  position: absolute;
-  transform: scale(1.3);
-  z-index: 1;
-}
-*/
 
 .horse figcaption {
   margin-top: .5em;
@@ -258,90 +220,59 @@ figure.tools:hover {
   box-shadow: -1px 2px 3px #c6c9cc;
 }
 
+img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
 
 /* ------------------ media query ----------------------- */
 
-@media all and (min-width: 1000px) {
-  body {
-    font-size: 18px;
-  }
+
+@media (min-width: )
+
+@media (max-width: 1110px) {
   section {
     margin: 0 3.6em;
   }
 }
-
-@media only screen and (max-width: 1000px) {
-  body {
-    font-size: 16px;
-  }
-  header h1 {
-    border: .05em solid #ffff66;
-  }
-  section {
-    margin: 0 3.2em;
-  }
   
-  #main-nav {
-    display: none;
-  }
-
-  #mini-nav ul {
-    display: flex;
-    text-transform: lowercase;
-    margin: 2em 3.5em 2.6em;
-    flex-wrap: wrap;  /* 使換行 */
-    border-bottom: 1px dashed #c1c18b;
-    justify-content: center;
-  }
-  
-  #mini-nav li {
-    margin: auto; /* to center the elements */
-    padding: 0 .5em;
-    line-height: 1.5;
-    font-size: 1.5em;    
-    letter-spacing: .06em;
-  }
-  
-  h2 {
-    font-size: 1.39em; 
-  }
-}
-
-@media only screen and (max-width: 686px) { /* got to add menu bar*/
-  body {
-    font-size: 15px;
-  }
-  
-  h2 {
-    font-size: 1.2em; 
+@media (max-width: 886px) {
+  header h1 {  
+    width: 7.2em;
+    font-size: 2.8em;
+    bottom: 25%;
   }
   
   section {
-    margin: 0 2.2em;
+    margin: 0 2.5em;
   }
 }
 
-@media only screen and (max-width: 530px) {
-  header h1 {
-    bottom: 23%;
-    transform: translate(-50%, 25%);  
-    font-size: 2.2em;  
-}
-
-  #mini-nav ul {
-    margin: 1.8em 3em 2em;
+@media (max-width: 560px) {
+  header h1 {  
+    width: 7em;
+    font-size: 2.6em;
+    bottom: 18%;
   }
-
+  
+  nav li {
+    font-size: 1.5em;
+    letter-spacing: .1em;
+  }
+  
   section {
     margin: 0 1.6em;
   }
-}
+}   
 
-@media only screen and (max-width: 492px) {
-  section {
-    font-size: 1.2em;
+@media (max-width: 320px) {
+  header h1 {
+    position: absolute;
+    top: 0;
   }
-  #mini-nav ul {
-    margin: 1.8em 2.5em;
+  
+  #img_intro {
+    
+    
   }
-}
+}   

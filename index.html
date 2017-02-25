@@ -2,7 +2,7 @@
 <html>
 	<head lang="en">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Chinese calligraphy</title>
         <link rel="canonical" href="https://en.wikipedia.org/wiki/Chinese_calligraphy">
         <link rel="stylesheet" href="style/main.css">
@@ -10,23 +10,33 @@
 	<body>
         <header role="banner">
             <img src="images/Songhuizong.jpg">
-            <h1 id="sinogry"><a href="index.html">Chinese Calligraphy</a></h1>
+            <h1 id="sinogry"><a href="index.html">Chinese<br>Calligraphy</a></h1>
         </header>
-        <nav>
+        <nav id="main-nav">
             <ul>
-                <li><a href="index.html#sinogry">Introduction</a></li>
-                <li><a href="evolution.html">Evolution and styles</a></li>
-                <li><a href="tool.html">Materials and tools</a></li>
-                <li><a href="tech.html">Technique and study</a></li>
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="evolution.html">Evolution & styles</a></li>
+                <li><a href="tool.html">Materials & tools</a></li>
+                <li><a href="tech.html">Technique & study</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
+        <nav id="mini-nav">
+            <ul>
+                <li><a href="index.html#sinogry">Intro</a></li>
+                <li><a href="evolution.html">Styles</a></li>
+                <li><a href="tool.html">Tools</a></li>
+                <li><a href="tech.html">Study</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
         <main>
             <section id="intro">
                 <figure id="img_intro">
-                    <img src="images/This_Letter_written_by_Mi_Fei.jpg">
+                    <img class="s-img" src="images/This_Letter_written_by_Mi_Fei.jpg">
                         <figcaption>
-                            Mi Fei, 米芾
+                            Mi Fu, 米芾
                         </figcaption>
                 </figure>
                 <p id="p_intro">
@@ -51,5 +61,6 @@
                 <small>The text content of this site was lovingly borrowed from <a href="https://en.wikipedia.org/wiki/Chinese_calligraphy" target="_blank">the Wikipedia article on Chinese calligraphy</a> on <time>17 November 2016</time> under the <a href="https://ja.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>. Licensing terms of content from other sources (photos, etc.) is noted along with each respective resource.</small>
             </p>
         </footer>
+      <script src="script.js"></script>
     </body>
 </html>

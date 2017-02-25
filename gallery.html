@@ -2,21 +2,31 @@
 <html>
 	<head lang="en">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Chinese calligraphy</title>
         <link rel="canonical" href="https://en.wikipedia.org/wiki/Chinese_calligraphy">
         <link rel="stylesheet" href="style/main.css">
 	</head>
 	<body>
-        <nav>
+        <nav id="main-nav">
             <ul>
-                <li><a href="index.html#sinogry">Introduction</a></li>
-                <li><a href="evolution.html">Evolution and styles</a></li>
-                <li><a href="tool.html">Materials and tools</a></li>
-                <li><a href="tech.html">Technique and study</a></li>
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="evolution.html">Evolution & styles</a></li>
+                <li><a href="tool.html">Materials & tools</a></li>
+                <li><a href="tech.html">Technique & study</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
         </nav>
+        <nav id="mini-nav">
+            <ul>
+                <li><a href="index.html#sinogry">Intro</a></li>
+                <li><a href="evolution.html">Styles</a></li>
+                <li><a href="tool.html">Tools</a></li>
+                <li><a href="tech.html">Study</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
         <main>
 <!--
             <section id="people">
@@ -53,13 +63,10 @@
 -->
             <section>
                 <h2>Gallery</h2>
-                <div  id="gallery">
+                <div id="gallery">
                     <figure>
-                        <img src="images/small/824px-LantingXu.jpg" alt="">
-                        <figcaption>A copy of Wang Xizhi's 蘭亭序 (Lanting Xu)</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/small/298px-Wang_Xizhi_Shang_Yu_Tie.jpg" alt="">
+                        <img class="s-figure" src="images/small/298px-Wang_Xizhi_Shang_Yu_Tie.jpg" alt="">
+                        <img class="b-figure" src="images/Wang_Xizhi_Shang_Yu_Tie.jpg" alt="">
                         <figcaption>A copy of Wang Xizhi's 上虞帖</figcaption>
                     </figure>
                     <figure>
@@ -72,11 +79,27 @@
                     </figure>
                     <figure>
                         <img src="images/small/113px-Wang_Xizhi_Huang_Ting_Jing.jpg" alt="">
-                        <figcaption>A copy of Wang Xizhi's Huang Ting Jing</figcaption>
+                        <figcaption>A copy of Wang Xizhi's<br> Huang Ting Jing</figcaption>
                     </figure>
                     <figure>
                         <img src="images/small/141px-Sheng_jiao_xu.jpg" alt="">
-                        <figcaption>Part of a stone rubbing of 雁塔聖教序 by Chu Suiliang</figcaption>
+                        <figcaption>Part of a stone rubbing of <br>雁塔聖教序 Chu Suiliang</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/small/189px-Koku_Saitcho_shounin.jpg" alt="">
+                        <figcaption>Cry for noble Saichō <br>by Emperor Saga</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/small/506px-Songhuizong.jpg" alt="">
+                        <figcaption><strong>(Cover Image) </strong>A work by Emperor Huizong of Song</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/small/824px-LantingXu.jpg" alt="">
+                        <figcaption>A copy of Wang Xizhi's 蘭亭序 (Lanting Xu)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/small/3000px-The_Calligraphy_Model_Sunny_after_Snow_by_Wang_Xizhi.jpg" alt="" width="100%">
+                        <figcaption>The Calligraphy Model 快雪晴時帖 (Sunny after Snow) by Wang Xizhi</figcaption>
                     </figure>
                 </div>
             </section>
@@ -86,5 +109,6 @@
                 <small>The text content of this site was lovingly borrowed from <a href="https://en.wikipedia.org/wiki/Chinese_calligraphy" target="_blank">the Wikipedia article on Chinese calligraphy</a> on <time>17 November 2016</time> under the <a href="https://ja.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a>. Licensing terms of content from other sources (photos, etc.) is noted along with each respective resource.</small>
             </p>
         </footer>
+      <script src="script.js"></script>
     </body>
 </html>
