@@ -1,0 +1,72 @@
+.section-title {
+	font-weight: 100;
+	font-size: 2rem;
+	text-align: center;
+	padding-bottom: .675rem;
+	
+	&--red {
+		color: $inkRed;
+		text-shadow: 2px 2px 0 $rice;
+	}
+		
+	@mixin atSmall {
+		font-size: 2.4rem;
+	}
+	
+	@mixin atMedium {
+		font-size: 2.8rem;
+	}
+	
+	&__box {
+		float: left;
+		margin: 0 1rem .2rem 0;
+		padding: .2rem .25rem .15rem;
+		border-radius: .25rem;
+		background-color: $lightOlive;
+		
+		font-size: 1.25rem;
+		color: $paleGold;
+		letter-spacing: 1px;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+		font-family: Trajan, Palatino, serif;
+		
+		@mixin atSmall {
+			font-size: 1.375rem;
+			margin: 0 2rem 1rem 0;
+		}
+		
+		@mixin atMedium {
+			font-size: 1.425rem;
+		}
+	}
+	
+/*
+	&__frame {
+		clear: both;
+		text-align: center;
+		width: 6rem;
+		height: 6rem;		
+		background-color: $lightOlive;
+		border-radius: .2rem;
+
+		background: linear-gradient(left, $rice, $darkOlive, $rice);
+		border: 2px solid #fff;
+		outline: 1px solid $lightOlive;
+
+		
+		&__text {
+			top: 2px;
+			font-size: 1.45rem;
+			color: $paleGold;
+			letter-spacing: 1px;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+			clear: both;
+			position: relative;
+			z-index: 1;
+			display: inline;
+			font-family: Trajan, Palatino, serif;
+		}
+	}
+*/
+
+}

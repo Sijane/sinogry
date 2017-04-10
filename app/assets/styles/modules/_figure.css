@@ -1,0 +1,99 @@
+.figure {
+/*	box-sizing: content-box !important;*/
+
+	@mixin atSmall {
+		max-width: 22rem;
+	}
+	
+	@mixin atMedium {
+		max-width: 30rem;
+	}
+	
+	&--small {
+		max-width: 15rem;
+	}
+	
+	&--large {
+		max-width: 100%;
+	}
+	
+	&--float {
+		float: right;
+		clear: both;
+
+		@mixin atSmall {
+			clear: none;
+		}		
+	}
+	
+	&--with-caption {
+		display: table;
+		
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		figcaption {
+			padding: .5rem;
+			font-size: 1rem;
+			text-align: center;
+			background-color: #fff;
+			box-shadow: inset 0 0 1.125rem $rice;
+
+			@mixin atMedium {
+				font-size: 1.1rem;
+			}
+		}		
+	}
+
+	&--with-source {
+		position: relative; /* for span */
+	}
+	
+	&__source {
+		position: absolute;
+		padding: 0 .3rem;
+		top: 0;
+		right: 0;
+		font-style: normal;
+		font-size: .8rem;
+		background-color: rgba(244,244,229, 0.5);
+		
+		@mixin atSmall {
+			font-size: 1rem;
+		}
+	}
+
+	&__source a {
+		color: #000;
+	}	
+}
+
+.frame {
+	transform: scale(.9);
+	max-width: 100%;
+	margin-right: 0;
+	margin-bottom: .5rem;
+
+	@mixin atMedium {
+		transform: scale(1);
+	}
+		
+	&__outline {
+		width: 8rem;
+		border: .88rem solid $rice;
+		box-shadow: -2px 2px 5px $greish;
+	}
+	
+	&__text {
+		text-align: center;
+		width: 12rem;
+		margin: 1.2rem 0 0 -2rem;
+		font-size: 1.1rem;
+		line-height: 1.5;
+		color: $mainOlive;
+		border-top: 1px dashed $lightOlive;
+		box-shadow: inset 0 0 0 #fff;		
+	}	
+}

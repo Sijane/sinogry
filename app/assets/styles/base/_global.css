@@ -1,0 +1,33 @@
+body {
+	font-family: Trajan, Palatino, serif;
+	color: #333;
+}
+
+/*
+h1, h2, h3, nav, section p:first-letter {
+  font-family: "Apple Chancery", cursive;
+}
+*/
+
+.primary-nav__stack,
+.primary-nav__flat__logo,
+.section-title, 
+.banner__title, 
+.page-section p:first-letter {
+	font-family: "Apple Chancery", cursive;
+}
+
+img {
+	max-width: 100%; /* to keep large image in a page frame */
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+	/* so that to not calcalate to be 100% wide */
+}
+
+a {
+	color: $lightOlive;
+	text-decoration: none;
+}

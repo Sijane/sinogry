@@ -1,0 +1,169 @@
+.primary-nav {
+	
+	position: relative;
+	
+	li {
+		list-style: none;
+	}
+
+	&__flat {
+		
+		@mixin clearfix;		
+		
+		@mixin atLarge {
+			display: none;
+		}
+
+		ul {
+			display: none;
+			
+			@mixin atSmall {
+				display: block;
+				float: right;	
+				margin-left: 0;
+				line-height: .5;
+				padding-top: .2rem;
+				text-align: center;				
+			}
+			
+			@mixin atMedium {
+				padding-top: .36rem;
+			}
+		}
+		
+		li {
+			display: inline-block;
+			padding-right: .8rem;
+			
+			@mixin atSmall {
+				padding-right: 1rem;
+			}
+			
+			@mixin atMedium {
+				padding-right: 1.8rem;
+			}
+		}
+		
+		li:last-child {
+
+			@mixin atMedium {
+				padding-right: 1.25rem
+			}
+		}
+		
+		a {
+			font-size: 1.3rem;
+			font-weight: 100;
+			color: $paleOlive;
+			
+			@mixin atMedium {
+				font-size: 1.475rem;
+			}
+								
+			&.is-current-link {
+				color: $inkRed;
+				padding: .4rem;
+				border-radius: 3px;
+				box-shadow: 0 0 6px #aaa;
+			}
+		}
+		
+		&__logo {	
+			float: left;
+/*			max-width: 0px;*/
+			padding: .5rem 1rem;
+			margin-right: -1rem;
+			letter-spacing: .08rem;
+			transition: all .5s;
+			color: $paleGold !important;
+			background-color: rgba($headRed, .8);
+
+			&--small {
+				display: none;
+			}
+			
+			@mixin atSmall {				
+				&--small {
+					display: block;
+					padding: .3rem;
+				}
+				
+				&--large {
+					display: none;
+				}
+			}
+			
+			@mixin atMedium {
+				padding: .52rem 1.1rem;
+			}
+		}
+		
+		&--is-visible {	
+			position: fixed;
+			z-index: 1;	
+			width: 100%;
+			top: 0;
+			background-color: rgba(255, 255, 255, .95);
+			box-shadow: 0 0 6px #aaa;
+			
+			@mixin atSmall {
+				background-color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+
+	&__stack {
+		display: none;
+		text-align: center;
+
+		@mixin atLarge {
+			display: block;
+			padding: 3rem 0;
+		}
+
+		ul {
+			padding: 0;
+		}
+		
+		li {
+			font-size: 1.8rem;
+			line-height: 1.65;
+			letter-spacing: .175rem;			
+		}	
+
+		li a {
+			color: $lightOlive;
+		}
+
+		li a:hover {
+			color: $inkRed;
+			height: 12px;
+			padding: 0 .3em;
+			font-weight: bolder;
+			border-radius: 3px;
+			box-shadow: 0 0 8px #aaa;
+		}
+
+		li a:focus, li a:active {
+			color: #fff;
+			font-weight: bold;
+			background-color: $inkRed;
+			box-shadow: 0 0 0 #fff;
+		}
+
+	/*
+		&::after {
+			content: " ";
+			display: block; 
+			height: 0;
+			margin: 1.8rem auto 1.2rem;
+			width: 12rem;
+			border-top: 1px dotted $mainOlive;
+		}
+	*/
+	}
+
+	&__head {
+		display: none;
+	}
+}

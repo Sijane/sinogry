@@ -1,0 +1,81 @@
+.page-section {
+	padding: 1.5rem 0;
+
+	@mixin atMedium {
+		padding: 3rem 0 2rem;
+	}
+	
+	@mixin atLarge {
+		padding: 5rem 0 2rem;
+	}
+		
+	&--flat {
+		padding: 0;
+	}
+	
+	&--b-padding {
+		padding-bottom: 3rem;
+	}
+	
+	&--t-padding {
+		padding-top: 5rem;
+	}
+/*
+	&--b-shadow {
+		box-shadow: inset 0 -5rem 5rem -5rem $rice;
+	}
+	
+	&--t-shadow {
+		box-shadow: inset 0 5rem 5rem -5rem $rice;
+	}
+*/
+
+	
+	&--rice {
+		background-color: $rice;
+		box-shadow: 0 0 2rem 1rem $rice;
+		
+		@mixin atMedium {
+			box-shadow: 0 0 3rem 1.5rem $rice;
+		}
+	}
+	
+	&--layer {
+		box-shadow: 0 0 2rem 1rem $rice;
+		background: linear-gradient(to bottom, $rice, #eee 70%, $paleGold);
+	}
+	
+	&--study {
+		background: $rice url('../../assets/images/small/永.png') center no-repeat;
+		background-size: 60%;
+
+/*
+		@mixin atLarge {
+			&.lazyloaded {
+			 background: url('../../assets/images/small/永.jpg')
+						top center no-repeat;
+			 background-size: cover;
+			}
+		}
+*/
+	}
+}
+
+main {
+	box-shadow: inset 0 0 1.5rem 0 $rice;
+	
+	@mixin atSmall {
+		box-shadow: inset 0 0 3.6rem 0 $rice;
+	}
+	
+	@mixin atLarge {
+		box-shadow: inset 0 0 6rem 0 $rice;
+	}	
+	
+	&::before {
+		content: "";
+		display: block;
+		height: 2.3rem; /* to cover the box-shadow */
+		background-color: $paleOlive;
+	}
+}

@@ -1,0 +1,35 @@
+.site-footer {
+	background-color: $paleGold;
+	margin-top: 0;
+	padding: .2rem 0 0;
+	
+	& a {
+		color: #fff;
+		border-bottom: 1px dotted;
+		cursor: pointer;
+	}
+	
+	&__text {
+		display: block;
+		margin-bottom: 0; 
+		font-weight: 200;
+		background-color: $lightOlive;
+		padding: .8rem 2rem;
+		
+		@mixin atMedium {
+			padding: .8rem 6rem;
+		}
+		
+		@mixin atLarge {
+			padding: .8rem 8rem;
+		}
+		
+/*
+		@mixin atMedium {
+			display: inline;
+			margin-bottom: 1rem;
+			margin-right: 1.4rem;
+		}
+*/
+	}
+}

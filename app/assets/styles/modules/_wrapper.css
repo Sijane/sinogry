@@ -1,0 +1,73 @@
+.wrapper {
+	padding-left: 1.125rem;
+	padding-right: 1.125rem;
+	max-width: 77.25rem;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;   /* to hide the negative margin created by gutters*/
+	
+	@mixin atSmall {
+		padding-left: 1.85rem;
+		padding-right: 1.85rem;
+	}
+	
+	@mixin atMedium {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+	
+	@mixin atLarge {
+		padding-left: 3.6rem;
+		padding-right: 3.6rem;
+	}
+	
+	/* (for small screen which padding isn't necessary) if another wrapper inside the original one then set the padding into 0 */
+	.wrapper {  
+		padding-left: 0;
+		padding-right: 0;
+	}
+		
+	&--wider {
+		@mixin atLarge {
+			max-width: 100rem;
+		}
+	}
+	
+	&--narrow {
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+/*
+	&--no-padding-until-medium {
+		padding-left: 0;
+		padding-right: 0;
+
+		@mixin atMedium {
+			 padding-left: 1.125rem;
+			 padding-right: 1.125rem;
+		}
+	}
+
+	&--no-padding-until-small {
+		padding-left: 0;
+		padding-right: 0;
+
+		@mixin atSmall {
+			 padding-left: 1.125rem;
+			 padding-right: 1.125rem;
+		}
+	}
+
+	&--b-margin {
+		margin-bottom: 1rem;
+
+		@mixin atSmall {
+			 margin-bottom: 3.875rem;
+		}
+	}
+*/
+	
+	
+}
