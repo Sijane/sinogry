@@ -24,13 +24,13 @@ class StickyNav {
 			element: this.headerTrigger[0],
 			handler: direction => {
 				if (direction == "down") {
-					that.flatNav.addClass('primary-nav__flat--is-visible')
+					that.flatNav.addClass('primary-nav__flat--is-fixed')
 					that.flatNav.addClass('is-current-link')
-					that.intro.addClass('page-section--t-padding')
+					that.intro.addClass('page-section--nav-padding')
 				} else {
-					that.flatNav.removeClass('primary-nav__flat--is-visible')
+					that.flatNav.removeClass('primary-nav__flat--is-fixed')
 					that.flatNav.removeClass('is-current-link')
-					that.intro.removeClass('page-section--t-padding')
+					that.intro.removeClass('page-section--nav-padding')
 				}
 			}
 		})
@@ -49,7 +49,7 @@ class StickyNav {
             $(matchingHeaderLink).addClass('is-current-link')
           }
         },
-        offset: '-40%'
+        offset: '40%'
       })
 
       new Waypoint({
@@ -61,7 +61,7 @@ class StickyNav {
             $(matchingHeaderLink).addClass('is-current-link')
           }
         },
-        offset: '50%'
+        offset: '-50%'
 //				console.log(offset)
       })
     })

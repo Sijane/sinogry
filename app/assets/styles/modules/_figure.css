@@ -1,12 +1,19 @@
 .figure {
 /*	box-sizing: content-box !important;*/
-
+	transform: scale(1);
+	
 	@mixin atSmall {
 		max-width: 22rem;
 	}
 	
 	@mixin atMedium {
 		max-width: 30rem;
+	}
+	
+	&--is-clicked {
+		transform: scale(1.2);
+		width: 90%;
+		display: none;
 	}
 	
 	&--small {
@@ -93,7 +100,7 @@
 		font-size: 1.1rem;
 		line-height: 1.5;
 		color: $mainOlive;
-		border-top: 1px dashed $lightOlive;
+		border-top: 1px dashed $mainOlive;
 		box-shadow: inset 0 0 0 #fff;		
 	}	
 }

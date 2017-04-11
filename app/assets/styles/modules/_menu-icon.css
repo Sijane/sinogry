@@ -65,3 +65,22 @@
 		display: none;
 	}
 }
+
+.menu-content {
+	display: none;
+
+	&--is-visible {
+		z-index: 1;
+		top: -2rem;
+		position: absolute;
+		display: block;
+		width: 100%;
+		margin-top: 2rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		background-color: #fff;
+		box-shadow: 0 1px 8px #aaa;
+		text-align: center;
+		padding-left: 0;
+	}	
+}

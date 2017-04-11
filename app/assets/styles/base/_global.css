@@ -12,7 +12,7 @@ h1, h2, h3, nav, section p:first-letter {
 .primary-nav__stack,
 .primary-nav__flat__logo,
 .section-title, 
-.banner__title, 
+.banner__logo, 
 .page-section p:first-letter {
 	font-family: "Apple Chancery", cursive;
 }
@@ -27,7 +27,11 @@ img {
 	/* so that to not calcalate to be 100% wide */
 }
 
+li {
+	list-style: none;
+}
+
 a {
-	color: $lightOlive;
+	color: $mainOlive;
 	text-decoration: none;
 }
