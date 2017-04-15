@@ -11,12 +11,13 @@ gulp.task('previewDist', () => {
   browserSync.init({
      notify: false,
      server: {
-        baseDir: "docs"  //dist
+        baseDir: "docs"  //dist or docs (5 in total)
      }
   })
 })
 
-gulp.task('deleteDistFolder', ['icons'], () => {
+//gulp.task('deleteDistFolder', ['icons'], () => {
+gulp.task('deleteDistFolder', () => {
   return del("./docs")  //dist
 })
 
@@ -36,7 +37,8 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
 });
 
 gulp.task('optimizeImages', ['deleteDistFolder'], () => {
-  return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
+//  return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
+	return gulp.src(['./app/assets/images/**/*'])
     .pipe(imagemin({
       progressive: true,   // for jpeg
       interlaced: true,    // for git
