@@ -1,0 +1,57 @@
+.modal {
+	position: fixed;
+	z-index: 5;
+  background-color: rgba(0, 0, 0, .75);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+	transition: all .3s ease-out;
+	padding-top: 6rem;
+	
+	@mixin atMedium {
+		padding-top: 8rem;
+	}
+	
+	&__image {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 90%;
+		max-height: 100%;
+	}
+
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+	
+	&__close {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: .1rem .3rem;
+    transform-origin: 100% 0;
+    background-color: $headRed;
+    color: #fff;
+		font-family: serif;
+    border-radius: .3rem;
+    cursor: pointer;
+		transform: scale(1, .85);
+		
+		@mixin atMedium {
+			transform: scale(1.2, 1);
+		}
+
+    &:hover {
+      background-color: $paleOlive;
+    }
+  }
+
+}

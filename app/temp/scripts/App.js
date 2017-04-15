@@ -70,6 +70,14 @@
 
 	var _ToggleImage2 = _interopRequireDefault(_ToggleImage);
 
+	var _ScrollHide = __webpack_require__(9);
+
+	var _ScrollHide2 = _interopRequireDefault(_ScrollHide);
+
+	var _Modal = __webpack_require__(10);
+
+	var _Modal2 = _interopRequireDefault(_Modal);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var mobileMenu = new _MobileMenu2.default();
@@ -84,6 +92,10 @@
 	var stickyNav = new _StickyNav2.default();
 
 	var toggleImage = new _ToggleImage2.default();
+
+	var scrollHide = new _ScrollHide2.default();
+
+	var modal = new _Modal2.default();
 
 /***/ },
 /* 1 */
@@ -10869,6 +10881,7 @@
 	  function StickyNav() {
 	    _classCallCheck(this, StickyNav);
 
+	    this.lazyImages = (0, _jquery2.default)('.lazyload');
 	    this.flatNav = (0, _jquery2.default)('.primary-nav__flat');
 	    this.headerTrigger = (0, _jquery2.default)('.primary-nav');
 	    this.pageSection = (0, _jquery2.default)('.page-section');
@@ -10877,9 +10890,17 @@
 	    this.createHeaderWaypoint();
 	    this.createPageSectionWaypoints();
 	    this.addSmoothScroll();
+	    this.refreshWaypoints();
 	  }
 
 	  _createClass(StickyNav, [{
+	    key: 'refreshWaypoints',
+	    value: function refreshWaypoints() {
+	      this.lazyImages.on("load", function () {
+	        Waypoint.refreshAll();
+	      });
+	    }
+	  }, {
 	    key: 'addSmoothScroll',
 	    value: function addSmoothScroll() {
 	      this.headerLinks.smoothScroll();
@@ -10918,7 +10939,7 @@
 	              (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
 	            }
 	          },
-	          offset: '40%'
+	          offset: '18%'
 	        });
 
 	        new Waypoint({
@@ -10931,7 +10952,6 @@
 	            }
 	          },
 	          offset: '-50%'
-	          //				console.log(offset)
 	        });
 	      });
 	    }
@@ -11311,21 +11331,37 @@
 		function ToggleImage() {
 			_classCallCheck(this, ToggleImage);
 
-			this.figure = (0, _jquery2.default)('.figure');
-			this.events();
+			this.thumbnail = (0, _jquery2.default)('#gallery img');
+			this.modalImage = (0, _jquery2.default)('.modal__image');
+			//		this.toolImage = $('#tools img')
+			//		this.largerImage = $('#gallery a')
+			//		this.events()
+			this.passHref();
+			//		this.scaleToolImg()
 		}
 
+		//	events() {
+		//		this.thumbnail.click(this.passHref.bind(this))
+		//	}
+		//	
+		//	passHref() {
+		//		const href = this.thumbnail.siblings().attr('data-href') //only first link
+		//		this.modalImage.attr('src', href) 
+		//		e.preventDefault
+		//		return false		
+		//	}
+
 		_createClass(ToggleImage, [{
-			key: 'events',
-			value: function events() {
-				this.figure.click(this.toggleFigure.bind(this));
-			}
-		}, {
-			key: 'toggleFigure',
-			value: function toggleFigure() {
-				//		alert('yo')
-				console.log(this.figure);
-				//		this.figure.toggleClass('figure--is-clicked')
+			key: 'passHref',
+			value: function passHref() {
+				var _this = this;
+
+				this.thumbnail.click(function (e) {
+					var href = (0, _jquery2.default)(e.target).siblings().attr('data-href');
+					_this.modalImage.attr('src', href);
+					e.preventDefault;
+					return false;
+				});
 			}
 		}]);
 
@@ -11333,6 +11369,125 @@
 	}();
 
 	exports.default = ToggleImage;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var ScrollHide = function () {
+		function ScrollHide() {
+			_classCallCheck(this, ScrollHide);
+
+			this.gallery = (0, _jquery2.default)('.gallery');
+			this.more = (0, _jquery2.default)('.more');
+			this.events();
+			//		this.hidding()
+		}
+
+		_createClass(ScrollHide, [{
+			key: 'events',
+			value: function events() {
+				this.gallery.scroll(this.hidding.bind(this));
+			}
+		}, {
+			key: 'hidding',
+			value: function hidding() {
+				this.more.addClass('more--hide');
+			}
+
+			//	hidding() {
+			//		this.gallery.scroll(() => {
+			//			this.more.addClass('more--hide')
+			//		})
+			//	}
+
+		}]);
+
+		return ScrollHide;
+	}();
+
+	exports.default = ScrollHide;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Modal = function () {
+	  function Modal() {
+	    _classCallCheck(this, Modal);
+
+	    this.openModalButton = (0, _jquery2.default)('#gallery img');
+	    this.modal = (0, _jquery2.default)('.modal');
+	    this.closeModalButton = (0, _jquery2.default)('.modal__close');
+	    this.events();
+	  }
+
+	  _createClass(Modal, [{
+	    key: 'events',
+	    value: function events() {
+	      this.openModalButton.click(this.openModal.bind(this));
+	      this.closeModalButton.click(this.closeModal.bind(this));
+
+	      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+	    }
+	  }, {
+	    key: 'keyPressHandler',
+	    value: function keyPressHandler(e) {
+	      if (e.keyCode == 27) {
+	        // .keyCode or .which
+	        this.closeModal();
+	      }
+	    }
+	  }, {
+	    key: 'openModal',
+	    value: function openModal() {
+	      this.modal.addClass('modal--is-visible');
+	      var href = this.openModalButton.attr('href');
+	      return false; // to be inactive to "#" behavior
+	    }
+	  }, {
+	    key: 'closeModal',
+	    value: function closeModal() {
+	      this.modal.removeClass('modal--is-visible');
+	    }
+	  }]);
+
+	  return Modal;
+	}();
+
+	exports.default = Modal;
 
 /***/ }
 /******/ ]);

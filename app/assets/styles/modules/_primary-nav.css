@@ -84,7 +84,7 @@
 				@mixin atLarge {
 					padding: .52rem .4rem .22rem;
 				}
-			}
+			}			
 		}
 		
 		&__logo {	
@@ -140,7 +140,7 @@
 
 		@mixin atLarge {
 			display: block;
-			padding: 3rem 0;
+			padding: 2.5rem 0;
 		}
 
 		ul {

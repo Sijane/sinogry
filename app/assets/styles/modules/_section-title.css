@@ -6,7 +6,7 @@
 	
 	&--red {
 		color: $inkRed;
-		text-shadow: 2px 2px 0 $rice;
+		text-shadow: 2px 2px $rice;
 	}
 		
 	@mixin atSmall {
@@ -27,7 +27,7 @@
 		font-size: 1.25rem;
 		color: $paleGold;
 		letter-spacing: 1px;
-		text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+		text-shadow: 0 1px rgba(0, 0, 0, .2);
 		font-family: Trajan, Palatino, serif;
 		
 		@mixin atSmall {
@@ -59,7 +59,7 @@
 			font-size: 1.45rem;
 			color: $paleGold;
 			letter-spacing: 1px;
-			text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+			text-shadow: 0 1px rgba(0, 0, 0, .2);
 			clear: both;
 			position: relative;
 			z-index: 1;

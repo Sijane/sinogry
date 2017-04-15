@@ -2,10 +2,6 @@
 /*	box-sizing: content-box !important;*/
 	transform: scale(1);
 	
-	@mixin atSmall {
-		max-width: 22rem;
-	}
-	
 	@mixin atMedium {
 		max-width: 30rem;
 	}

@@ -1,4 +1,51 @@
+@keyframes turnRed {  
+/*
+	0% { border-left: 2.25rem solid #dedede; }
+	30% { border-left: 2.25rem solid #dedede; }
+	31% { border-left: 2.25rem solid red;}
+	80% { border-left: 2.25rem solid red; }
+*/
+	0% { 
+		color: $greish; 
+		left: 45%;
+	}
+	
+	100% { 
+		left: 65%;
+	}
+}
+
 .gallery {
 	display: flex;
 	overflow: scroll;
+	
+	& img {
+		cursor: zoom-in;
+	}
 }
+
+.more {
+	transition: all .3s ease-out;
+	
+	&-sign {
+		position: absolute;
+		left: 45%;
+		transform: translateX(-50%) scaleY(2.8);
+		transition: all .8s ease-out;
+		margin-top: -3rem;
+		color: $lightGold;
+		font-size: 1.1rem;
+		animation: turnRed 2.5s infinite;
+
+		@mixin atMedium {
+			font-size: 1.35rem;
+			animation: turnRed 3.5s infinite;
+			margin-top: -5rem;
+		}
+	}
+			
+	&--hide {
+		opacity: 0;
+	}
+}
+

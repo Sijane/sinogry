@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll'
 
 class StickyNav {
 	constructor() {
+		this.lazyImages = $('.lazyload')
 		this.flatNav = $('.primary-nav__flat')
 		this.headerTrigger = $('.primary-nav')
 		this.pageSection = $('.page-section')
@@ -12,6 +13,13 @@ class StickyNav {
 		this.createHeaderWaypoint()
     this.createPageSectionWaypoints()
     this.addSmoothScroll()
+		this.refreshWaypoints()
+  }
+
+	refreshWaypoints() {
+    this.lazyImages.on("load", function() {
+      Waypoint.refreshAll()
+    })
   }
 
   addSmoothScroll() {
@@ -42,19 +50,19 @@ class StickyNav {
       const currentPageSection = this
       new Waypoint({
         element: currentPageSection,
-        handler: direction => {
+        handler: function(direction) {
           if (direction == "down") {
             const matchingHeaderLink = currentPageSection.getAttribute('data-matching-link')
             that.headerLinks.removeClass('is-current-link')
             $(matchingHeaderLink).addClass('is-current-link')
           }
         },
-        offset: '40%'
+        offset: '18%'
       })
 
       new Waypoint({
         element: currentPageSection,
-        handler: direction => {
+        handler: function(direction) {
           if (direction == "up") {
             const matchingHeaderLink = currentPageSection.getAttribute('data-matching-link')
             that.headerLinks.removeClass('is-current-link')
@@ -62,7 +70,6 @@ class StickyNav {
           }
         },
         offset: '-50%'
-//				console.log(offset)
       })
     })
   }

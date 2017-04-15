@@ -4,6 +4,8 @@ import RevealOnScroll from './modules/RevealOnScroll'
 import Mute from './modules/Mute'
 import StickyNav from './modules/StickyNav'
 import ToggleImage from './modules/ToggleImage'
+import ScrollHide from './modules/ScrollHide'
+import Modal from './modules/Modal'
 
 const mobileMenu = new MobileMenu()
 
@@ -17,3 +19,7 @@ const mute = new Mute()
 const stickyNav = new StickyNav()
 
 const toggleImage = new ToggleImage()
+
+const scrollHide = new ScrollHide()
+
+const modal = new Modal()

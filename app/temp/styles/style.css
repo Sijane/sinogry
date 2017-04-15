@@ -459,11 +459,82 @@ a {
 	text-decoration: none;
 }
 
+@-webkit-keyframes turnRed {  
+/*
+	0% { border-left: 2.25rem solid #dedede; }
+	30% { border-left: 2.25rem solid #dedede; }
+	31% { border-left: 2.25rem solid red;}
+	80% { border-left: 2.25rem solid red; }
+*/
+	0% { 
+		color: #c6c9cc; 
+		left: 45%;
+	}
+	
+	100% { 
+		left: 65%;
+	}
+}
+
+@keyframes turnRed {  
+/*
+	0% { border-left: 2.25rem solid #dedede; }
+	30% { border-left: 2.25rem solid #dedede; }
+	31% { border-left: 2.25rem solid red;}
+	80% { border-left: 2.25rem solid red; }
+*/
+	0% { 
+		color: #c6c9cc; 
+		left: 45%;
+	}
+	
+	100% { 
+		left: 65%;
+	}
+}
+
 .gallery {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	overflow: scroll;
+}
+
+.gallery img {
+  cursor: zoom-in;
+}
+
+.more {
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.more-sign {
+  position: absolute;
+  left: 45%;
+  -webkit-transform: translateX(-50%) scaleY(2.8);
+          transform: translateX(-50%) scaleY(2.8);
+  -webkit-transition: all .8s ease-out;
+  transition: all .8s ease-out;
+  margin-top: -3rem;
+  color: #ffff66;
+  font-size: 1.1rem;
+  -webkit-animation: turnRed 2.5s infinite;
+          animation: turnRed 2.5s infinite;
+}
+
+@media (min-width: 800px) {
+
+  .more-sign {
+    font-size: 1.35rem;
+    -webkit-animation: turnRed 3.5s infinite;
+            animation: turnRed 3.5s infinite;
+    margin-top: -5rem;
+  }
+}
+
+.more--hide {
+  opacity: 0;
 }
 
 .banner {
@@ -569,13 +640,6 @@ a {
 /*	box-sizing: content-box !important;*/
 	-webkit-transform: scale(1);
 	        transform: scale(1);	
-}
-
-@media (min-width: 580px) {
-
-  .figure {
-    max-width: 22rem;
-  }
 }
 
 @media (min-width: 800px) {
@@ -781,7 +845,14 @@ a {
 }
 
 .page-section--nav-padding {
-  padding-top: 3.5rem;
+  padding-top: 4rem;
+}
+
+@media (min-width: 1010px) {
+
+  .page-section--nav-padding {
+    padding-top: 5rem;
+  }
 }
 
 /*
@@ -815,6 +886,7 @@ a {
 .page-section--study.lazyloaded {
   background: #f4f4e5 url('../../assets/images/small/永.png') center no-repeat;
   background-size: 60%;
+  background-attachment: fixed;
 }
 
 main {
@@ -1022,7 +1094,7 @@ main::before {
 			font-size: 1.45rem;
 			color: $paleGold;
 			letter-spacing: 1px;
-			text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+			text-shadow: 0 1px rgba(0, 0, 0, .2);
 			clear: both;
 			position: relative;
 			z-index: 1;
@@ -1036,7 +1108,7 @@ main::before {
 
 .section-title--red {
   color: #fb1618;
-  text-shadow: 2px 2px 0 #f4f4e5;
+  text-shadow: 2px 2px #f4f4e5;
 }
 
 @media (min-width: 580px) {
@@ -1062,7 +1134,7 @@ main::before {
   font-size: 1.25rem;
   color: #ffffc9;
   letter-spacing: 1px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+  text-shadow: 0 1px rgba(0, 0, 0, .2);
   font-family: Trajan, Palatino, serif;
 }
 
@@ -1422,7 +1494,7 @@ main::before {
 
   .primary-nav__stack {
     display: block;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
 }
 
@@ -1470,7 +1542,75 @@ main::before {
           transform: scale(1);
 }
 
-/*@import "modules/_modal";*/
+.modal {
+	position: fixed;
+	z-index: 5;
+  background-color: rgba(0, 0, 0, .75);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	padding-top: 6rem;
+
+}
+
+@media (min-width: 800px) {
+
+  .modal {
+    padding-top: 8rem;
+  }
+}
+
+.modal__image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 100%;
+}
+
+.modal--is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal__close {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: .1rem .3rem;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  background-color: #DE250E;
+  color: #fff;
+  font-family: serif;
+  border-radius: .3rem;
+  cursor: pointer;
+  -webkit-transform: scale(1, .85);
+          transform: scale(1, .85);
+}
+
+@media (min-width: 800px) {
+
+  .modal__close {
+    -webkit-transform: scale(1.2, 1);
+            transform: scale(1.2, 1);
+  }
+}
+
+.modal__close:hover {
+  background-color: #c1c18b;
+}
 
 /*@import "modules/_social-icons";*/
 

@@ -5,7 +5,7 @@ module.exports = {
   },
   output: {
     path: "/Users/SJ/sinogry/app/temp/scripts",
-//     path: path.join('/Users/SJ/sinogry', "./app/temp/scripts"),
+//	  path: path.join('/Users/SJ/sinogry', "./app/temp/scripts"),
     filename: "[name].js"
   },
 
