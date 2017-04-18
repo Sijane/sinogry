@@ -10815,7 +10815,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -10829,21 +10829,21 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Mute = function () {
-		function Mute() {
-			_classCallCheck(this, Mute);
+	  function Mute() {
+	    _classCallCheck(this, Mute);
 
-			this.iframe = (0, _jquery2.default)('#youtube');
-			this.events();
-		}
+	    this.iframe = (0, _jquery2.default)('#youtube');
+	    this.events();
+	  }
 
-		_createClass(Mute, [{
-			key: 'events',
-			value: function events() {
-				this.iframe.muted = true;
-			}
-		}]);
+	  _createClass(Mute, [{
+	    key: 'events',
+	    value: function events() {
+	      this.iframe.muted = true;
+	    }
+	  }]);
 
-		return Mute;
+	  return Mute;
 	}();
 
 	exports.default = Mute;
@@ -11313,7 +11313,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11327,44 +11327,44 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var ToggleImage = function () {
-		function ToggleImage() {
-			_classCallCheck(this, ToggleImage);
+	  function ToggleImage() {
+	    _classCallCheck(this, ToggleImage);
 
-			this.thumbnail = (0, _jquery2.default)('#gallery img');
-			this.modalImage = (0, _jquery2.default)('.modal__image');
-			//		this.toolImage = $('#tools img')
-			//		this.largerImage = $('#gallery a')
-			//		this.events()
-			this.passHref();
-			//		this.scaleToolImg()
-		}
+	    this.thumbnail = (0, _jquery2.default)('#gallery img');
+	    this.modalImage = (0, _jquery2.default)('.modal__image');
+	    //    this.toolImage = $('#tools img')
+	    //    this.largerImage = $('#gallery a')
+	    //    this.events()
+	    this.passHref();
+	    //    this.scaleToolImg()
+	  }
 
-		//	events() {
-		//		this.thumbnail.click(this.passHref.bind(this))
-		//	}
-		//	
-		//	passHref() {
-		//		const href = this.thumbnail.siblings().attr('data-href') //only first link
-		//		this.modalImage.attr('src', href) 
-		//		e.preventDefault
-		//		return false		
-		//	}
+	  //  events() {
+	  //    this.thumbnail.click(this.passHref.bind(this))
+	  //  }
+	  //  
+	  //  passHref() {
+	  //    const href = this.thumbnail.siblings().attr('data-href') //only first link
+	  //    this.modalImage.attr('src', href) 
+	  //    e.preventDefault
+	  //    return false    
+	  //  }
 
-		_createClass(ToggleImage, [{
-			key: 'passHref',
-			value: function passHref() {
-				var _this = this;
+	  _createClass(ToggleImage, [{
+	    key: 'passHref',
+	    value: function passHref() {
+	      var _this = this;
 
-				this.thumbnail.click(function (e) {
-					var href = (0, _jquery2.default)(e.target).siblings().attr('data-href');
-					_this.modalImage.attr('src', href);
-					e.preventDefault;
-					return false;
-				});
-			}
-		}]);
+	      this.thumbnail.click(function (e) {
+	        var href = (0, _jquery2.default)(e.target).siblings().attr('data-href');
+	        _this.modalImage.attr('src', href);
+	        e.preventDefault;
+	        return false;
+	      });
+	    }
+	  }]);
 
-		return ToggleImage;
+	  return ToggleImage;
 	}();
 
 	exports.default = ToggleImage;
@@ -11376,7 +11376,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11390,35 +11390,35 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var ScrollHide = function () {
-		function ScrollHide() {
-			_classCallCheck(this, ScrollHide);
+	  function ScrollHide() {
+	    _classCallCheck(this, ScrollHide);
 
-			this.gallery = (0, _jquery2.default)('.gallery');
-			this.more = (0, _jquery2.default)('.more');
-			this.events();
-			//		this.hidding()
-		}
+	    this.gallery = (0, _jquery2.default)('.gallery');
+	    this.more = (0, _jquery2.default)('.more');
+	    this.events();
+	    //    this.hidding()
+	  }
 
-		_createClass(ScrollHide, [{
-			key: 'events',
-			value: function events() {
-				this.gallery.scroll(this.hidding.bind(this));
-			}
-		}, {
-			key: 'hidding',
-			value: function hidding() {
-				this.more.addClass('more--hide');
-			}
+	  _createClass(ScrollHide, [{
+	    key: 'events',
+	    value: function events() {
+	      this.gallery.scroll(this.hidding.bind(this));
+	    }
+	  }, {
+	    key: 'hidding',
+	    value: function hidding() {
+	      this.more.addClass('more--hide');
+	    }
 
-			//	hidding() {
-			//		this.gallery.scroll(() => {
-			//			this.more.addClass('more--hide')
-			//		})
-			//	}
+	    //  hidding() {
+	    //    this.gallery.scroll(() => {
+	    //      this.more.addClass('more--hide')
+	    //    })
+	    //  }
 
-		}]);
+	  }]);
 
-		return ScrollHide;
+	  return ScrollHide;
 	}();
 
 	exports.default = ScrollHide;
@@ -11458,7 +11458,6 @@
 	    value: function events() {
 	      this.openModalButton.click(this.openModal.bind(this));
 	      this.closeModalButton.click(this.closeModal.bind(this));
-
 	      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
 	    }
 	  }, {
