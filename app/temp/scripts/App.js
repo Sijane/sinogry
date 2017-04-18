@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -80,26 +80,25 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var mobileMenu = new _MobileMenu2.default();
-
-	new _RevealOnScroll2.default((0, _jquery2.default)('section p'), '75%');
-	new _RevealOnScroll2.default((0, _jquery2.default)('.frame'), '70%');
 	// new RevealOnScroll(document.querySelectorAll('.feature-item'), '90%')
 	// new RevealOnScroll(document.querySelectorAll('.testimonial'), '65%')
 
-	var mute = new _Mute2.default();
+	(0, _jquery2.default)(document).ready(function () {
+	  var mobileMenu = new _MobileMenu2.default();
+	  new _RevealOnScroll2.default((0, _jquery2.default)('section p'), '75%');
+	  new _RevealOnScroll2.default((0, _jquery2.default)('.frame'), '70%');
+	  var mute = new _Mute2.default();
+	  var toggleImage = new _ToggleImage2.default();
+	  var scrollHide = new _ScrollHide2.default();
+	  var modal = new _Modal2.default();
+	  window.setTimeout(function () {
+	    return new _StickyNav2.default();
+	  }, 100);
+	});
 
-	var stickyNav = new _StickyNav2.default();
-
-	var toggleImage = new _ToggleImage2.default();
-
-	var scrollHide = new _ScrollHide2.default();
-
-	var modal = new _Modal2.default();
-
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * jQuery JavaScript Library v2.2.4
@@ -9917,9 +9916,9 @@
 	}));
 
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -9971,9 +9970,9 @@
 
 	exports.default = MobileMenu;
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -10046,9 +10045,9 @@
 
 	exports.default = RevealOnScroll;
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*!
 	Waypoints - 4.0.1
@@ -10809,9 +10808,9 @@
 	}())
 	;
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -10849,9 +10848,9 @@
 
 	exports.default = Mute;
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -10962,9 +10961,9 @@
 
 	exports.default = StickyNav;
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * jQuery Smooth Scroll - v2.1.2 - 2017-01-19
@@ -11307,9 +11306,9 @@
 
 
 
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -11370,9 +11369,9 @@
 
 	exports.default = ToggleImage;
 
-/***/ },
+/***/ }),
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -11424,9 +11423,9 @@
 
 	exports.default = ScrollHide;
 
-/***/ },
+/***/ }),
 /* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -11489,5 +11488,5 @@
 
 	exports.default = Modal;
 
-/***/ }
+/***/ })
 /******/ ]);

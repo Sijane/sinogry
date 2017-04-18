@@ -6,4 +6,5 @@ require('./gulp/tasks/scripts')
 require('./gulp/tasks/modernizr')
 require('./gulp/tasks/build')
 
-
+const gulp = require('gulp')
+gulp.task('default', ['styles', 'scripts', 'watch'])
