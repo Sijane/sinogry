@@ -1,10 +1,13 @@
+const path = require('path')
+
 module.exports = {
   entry: {
     App: "./app/assets/scripts/App.js",
     Vendor: "./app/assets/scripts/Vendor.js"
   },
   output: {
-    path: "./app/temp/scripts",
+    path: path.join(__dirname, "app/temp/scripts"),
+//    path: "./app/temp/scripts",
 //	  path: path.join('/Users/SJ/sinogry', "./app/temp/scripts"),
     filename: "[name].js"
   },
