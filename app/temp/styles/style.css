@@ -505,7 +505,6 @@ a {
 }
 
 .more {
-	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
 }
 
@@ -514,7 +513,6 @@ a {
   left: 45%;
   -webkit-transform: translateX(-50%) scaleY(2.8);
           transform: translateX(-50%) scaleY(2.8);
-  -webkit-transition: all .8s ease-out;
   transition: all .8s ease-out;
   margin-top: -3rem;
   color: #ffff66;
@@ -552,7 +550,6 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(.9);
           transform: translate(-50%, -50%) scale(.9);
-  -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
   background-color: #515100;
   border: .2rem solid #ffff66;
@@ -879,7 +876,6 @@ a {
 
 .page-section--layer {
   box-shadow: 0 0 2rem 1rem #f4f4e5;
-  background: -webkit-linear-gradient(top, #f4f4e5, #eee 70%, #ffffc9);
   background: linear-gradient(to bottom, #f4f4e5, #eee 70%, #ffffc9);
 }
 
@@ -1219,7 +1215,6 @@ main::before {
   background-color: #c1c18b;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
-  -webkit-transition: -webkit-transform .3s ease-out;
   transition: -webkit-transform .3s ease-out;
   transition: transform .3s ease-out;
   transition: transform .3s ease-out, -webkit-transform .3s ease-out;
@@ -1232,7 +1227,6 @@ main::before {
   width: 1.25rem;
   height: 3px;
   background-color: #c1c18b;
-  -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
   -webkit-transform-origin: 0 50%;
           transform-origin: 0 50%;
@@ -1248,7 +1242,6 @@ main::before {
   background-color: #c1c18b;
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
-  -webkit-transition: -webkit-transform .3s ease-out;
   transition: -webkit-transform .3s ease-out;
   transition: transform .3s ease-out;
   transition: transform .3s ease-out, -webkit-transform .3s ease-out;
@@ -1424,7 +1417,6 @@ main::before {
   float: left;
   padding: .55rem .9rem;
   letter-spacing: .08rem;
-  -webkit-transition: all .5s;
   transition: all .5s;
   color: #ffffc9 !important;
   background-color: rgba(222,37,14, .8);
@@ -1530,7 +1522,6 @@ main::before {
 
 .reveal-item {
   opacity: 0;
-  -webkit-transition: all 1.5s ease-out;
   transition: all 1.5s ease-out;
 }
 
@@ -1552,7 +1543,6 @@ main::before {
   right: 0;
   opacity: 0;
   visibility: hidden;
-	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
 	padding-top: 6rem;
 

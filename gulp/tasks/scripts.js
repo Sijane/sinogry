@@ -5,8 +5,8 @@ gulp.task('scripts', ['modernizr'], callback => {
   webpack(require('../../webpack.config.js'), (err, stats) => {
     if (err) {
       console.log(err.toString());
+      return
     }
-
     console.log(stats.toString());
     callback();
   })

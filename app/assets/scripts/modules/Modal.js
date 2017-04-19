@@ -11,7 +11,6 @@ class Modal {
   events() {
     this.openModalButton.click(this.openModal.bind(this))
     this.closeModalButton.click(this.closeModal.bind(this))
-		
     $(document).keyup(this.keyPressHandler.bind(this))
   }
 
@@ -23,14 +22,13 @@ class Modal {
 
   openModal() {
     this.modal.addClass('modal--is-visible')
-		const href = this.openModalButton.attr('href')
+    const href = this.openModalButton.attr('href')
     return false;  // to be inactive to "#" behavior
   }
 
   closeModal() {
     this.modal.removeClass('modal--is-visible')
   }
-
 }
 
 export default Modal
