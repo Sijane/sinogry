@@ -5,7 +5,6 @@ class ToggleImage {
     this.thumbnail = $('#gallery img')
     this.modalImage = $('.modal__image')
     this.setCallback()
-    console.log('hey')
   }
 
   setCallback() {
@@ -15,7 +14,7 @@ class ToggleImage {
 //  setCallback() {
 //    this.thumbnail.click(function(e) {
 //      this.passHref(e)  
-  // refer to the element being clicked, not to the toggleImage
+//     // refer to the element being clicked, not to the toggleImage
 //    })
 //  }
   
