@@ -6,7 +6,7 @@
 	margin-right: auto;
 	overflow: hidden;   /* to hide the negative margin created by gutters*/
 	
-	@mixin atSmall {
+	@mixin atSmall { 
 		padding-left: 1.85rem;
 		padding-right: 1.85rem;
 	}
@@ -16,7 +16,7 @@
 		padding-right: 3rem;
 	}
 	
-	@mixin atLarge {
+	@mixin atLarge { 
 		padding-left: 3.6rem;
 		padding-right: 3.6rem;
 	}

@@ -1,4 +1,4 @@
-@keyframes turnRed {  
+@keyframes toLeft {  
 /*
 	0% { border-left: 2.25rem solid #dedede; }
 	30% { border-left: 2.25rem solid #dedede; }
@@ -6,14 +6,15 @@
 	80% { border-left: 2.25rem solid red; }
 */
 	0% { 
-		color: $greish; 
-		left: 45%;
+		color: $mainOlive; 
+		left: 45%; 
 	}
 	
 	100% { 
+    color: $lightGold;
 		left: 65%;
 	}
-}
+} 
 
 .gallery {
 	display: flex;
@@ -33,13 +34,12 @@
 		transform: translateX(-50%) scaleY(2.8);
 		transition: all .8s ease-out;
 		margin-top: -3rem;
-		color: $lightGold;
 		font-size: 1.1rem;
-		animation: turnRed 2.5s infinite;
+		animation: toLeft 2.5s infinite;
 
 		@mixin atMedium {
 			font-size: 1.35rem;
-			animation: turnRed 3.5s infinite;
+			animation: toLeft 3.5s infinite;
 			margin-top: -5rem;
 		}
 	}
