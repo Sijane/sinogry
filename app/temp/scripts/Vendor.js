@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -52,7 +52,7 @@
 
 	__webpack_require__(13);
 
-/***/ }),
+/***/ },
 /* 1 */,
 /* 2 */,
 /* 3 */,
@@ -64,14 +64,14 @@
 /* 9 */,
 /* 10 */,
 /* 11 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	'use strict';
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	/*!
-	 * modernizr v3.5.0
+	 * modernizr v3.4.0
 	 * Build https://modernizr.com/download?-setclasses-dontmin
 	 *
 	 * Copyright (c)
@@ -107,7 +107,7 @@
 
 	  var ModernizrProto = {
 	    // The current version, dummy
-	    _version: '3.5.0',
+	    _version: '3.4.0',
 
 	    // Any settings that don't work as separate modules
 	    // can go in here as configuration.
@@ -314,9 +314,9 @@
 	  ;
 	})(window, document);
 
-/***/ }),
+/***/ },
 /* 12 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	(function(window, factory) {
 		var lazySizes = factory(window, window.document);
@@ -1003,9 +1003,9 @@
 	));
 
 
-/***/ }),
+/***/ },
 /* 13 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 	 * https://scottjehl.github.io/picturefill/
@@ -2553,5 +2553,5 @@
 	} )( window, document );
 
 
-/***/ })
+/***/ }
 /******/ ]);

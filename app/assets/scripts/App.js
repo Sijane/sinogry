@@ -7,10 +7,6 @@ import ToggleImage from './modules/ToggleImage'
 import ScrollHide from './modules/ScrollHide'
 import Modal from './modules/Modal'
 
-
-// new RevealOnScroll(document.querySelectorAll('.feature-item'), '90%')
-// new RevealOnScroll(document.querySelectorAll('.testimonial'), '65%')
-
 $(document).ready(() => {
   const mobileMenu = new MobileMenu()
   new RevealOnScroll($('section p'), '75%')

@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -80,9 +80,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// new RevealOnScroll(document.querySelectorAll('.feature-item'), '90%')
-	// new RevealOnScroll(document.querySelectorAll('.testimonial'), '65%')
-
 	(0, _jquery2.default)(document).ready(function () {
 	  var mobileMenu = new _MobileMenu2.default();
 	  new _RevealOnScroll2.default((0, _jquery2.default)('section p'), '75%');
@@ -96,9 +93,9 @@
 	  }, 100);
 	});
 
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * jQuery JavaScript Library v2.2.4
@@ -9916,9 +9913,9 @@
 	}));
 
 
-/***/ }),
+/***/ },
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -9970,9 +9967,9 @@
 
 	exports.default = MobileMenu;
 
-/***/ }),
+/***/ },
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -10045,9 +10042,9 @@
 
 	exports.default = RevealOnScroll;
 
-/***/ }),
+/***/ },
 /* 4 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	/*!
 	Waypoints - 4.0.1
@@ -10808,9 +10805,9 @@
 	}())
 	;
 
-/***/ }),
+/***/ },
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -10848,9 +10845,9 @@
 
 	exports.default = Mute;
 
-/***/ }),
+/***/ },
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -10961,9 +10958,9 @@
 
 	exports.default = StickyNav;
 
-/***/ }),
+/***/ },
 /* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * jQuery Smooth Scroll - v2.1.2 - 2017-01-19
@@ -11306,9 +11303,9 @@
 
 
 
-/***/ }),
+/***/ },
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -11332,36 +11329,45 @@
 
 	    this.thumbnail = (0, _jquery2.default)('#gallery img');
 	    this.modalImage = (0, _jquery2.default)('.modal__image');
-	    //    this.toolImage = $('#tools img')
-	    //    this.largerImage = $('#gallery a')
-	    //    this.events()
-	    this.passHref();
-	    //    this.scaleToolImg()
+	    this.setCallback();
 	  }
 
-	  //  events() {
-	  //    this.thumbnail.click(this.passHref.bind(this))
-	  //  }
-	  //  
-	  //  passHref() {
-	  //    const href = this.thumbnail.siblings().attr('data-href') //only first link
-	  //    this.modalImage.attr('src', href) 
-	  //    e.preventDefault
-	  //    return false    
-	  //  }
-
 	  _createClass(ToggleImage, [{
-	    key: 'passHref',
-	    value: function passHref() {
+	    key: 'setCallback',
+	    value: function setCallback() {
 	      var _this = this;
 
-	      this.thumbnail.click(function (e) {
-	        var href = (0, _jquery2.default)(e.target).siblings().attr('data-href');
-	        _this.modalImage.attr('src', href);
-	        e.preventDefault;
-	        return false;
+	      this.thumbnail.click(function (x) {
+	        return _this.passHref(x);
 	      });
 	    }
+
+	    //  setCallback() {
+	    //    this.thumbnail.click(function(e) {
+	    //      this.passHref(e)  
+	    //     // refer to the element being clicked, not to the toggleImage
+	    //    })
+	    //  }
+
+	  }, {
+	    key: 'passHref',
+	    value: function passHref(e) {
+	      var href = (0, _jquery2.default)(e.target).siblings().attr('data-href');
+	      this.modalImage.attr('src', href);
+	      e.preventDefault;
+	      return false;
+	    }
+
+	    //  passHref() {
+	    //    this.thumbnail.click(e => {
+	    //      const href = $(e.target).siblings().attr('data-href')
+	    ////      console.log(href)
+	    //      this.modalImage.attr('src', href)
+	    //      e.preventDefault
+	    //      return false
+	    //    })
+	    //  }  
+
 	  }]);
 
 	  return ToggleImage;
@@ -11369,9 +11375,9 @@
 
 	exports.default = ToggleImage;
 
-/***/ }),
+/***/ },
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -11423,9 +11429,9 @@
 
 	exports.default = ScrollHide;
 
-/***/ }),
+/***/ },
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -11487,5 +11493,5 @@
 
 	exports.default = Modal;
 
-/***/ })
+/***/ }
 /******/ ]);

@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-class Modal {
+class Modal { 
   constructor() {
     this.openModalButton = $('#gallery img')
     this.modal = $('.modal')
